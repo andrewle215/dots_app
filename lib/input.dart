@@ -120,6 +120,7 @@ class _InputPageState extends State<InputPage> {
                     colour: Colors.redAccent,
                     cardChild: Container(
                       child: Column(
+
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
