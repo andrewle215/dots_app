@@ -66,7 +66,7 @@ class _MainState extends State<Main> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.mail,
+              Icons.map,
               color: Colors.black,
             ),
             label: 'Map',
