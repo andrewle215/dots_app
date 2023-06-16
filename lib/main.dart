@@ -23,7 +23,7 @@ class Main extends StatefulWidget {
 class _MainState extends State<Main> {
   List<Widget> pages = [
     InputPage(),
-    MyPage(),
+    MyApp(),
   ];
 
   int i = 0;
