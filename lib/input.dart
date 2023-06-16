@@ -17,7 +17,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: new ReusableCard(
-                    colour: Colors.grey,
+                    colour: Colors.black87,
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -55,7 +55,7 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: new ReusableCard(
-                    colour: Colors.grey,
+                    colour: Colors.black87,
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -75,7 +75,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReusableCard(
-              colour: Colors.grey,
+              colour: Colors.black87,
               cardChild: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
@@ -106,7 +106,7 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: new ReusableCard(
-                    colour: Colors.grey,
+                    colour: Colors.black87,
                     cardChild: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),

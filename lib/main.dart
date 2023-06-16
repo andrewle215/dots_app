@@ -58,7 +58,7 @@ class _MainState extends State<Main> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Icons.mail,
               color: Colors.black,
             ),
             label: 'Home',
