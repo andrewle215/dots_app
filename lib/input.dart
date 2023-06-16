@@ -1,6 +1,8 @@
+import 'package:Dots_Demo_App/profile.dart';
 import 'package:flutter/material.dart';
 import 'map_page.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'profile.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -116,6 +118,10 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
+            child: GestureDetector(
+            onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
+          },
                   child: new ReusableCard(
                     colour: Colors.redAccent,
                     cardChild: Container(
@@ -129,6 +135,7 @@ class _InputPageState extends State<InputPage> {
                       ),
                     ),
                   ),
+                ),
                 ),
                 Expanded(
                   child: new ReusableCard(
