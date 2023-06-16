@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'map_page.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -7,6 +8,24 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  _launchURL() async {
+    Uri _url = Uri.parse('https://transportation.umd.edu/about-us');
+    if (await launchUrl(_url)) {
+      await launchUrl(_url);
+    } else {
+      throw 'Could not launch $_url';
+    }
+  }
+
+  _launchURL2() async {
+    Uri _url = Uri.parse('https://www.google.com');
+    if (await launchUrl(_url)) {
+      await launchUrl(_url);
+    } else {
+      throw 'Could not launch $_url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,57 +35,63 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: new ReusableCard(
-                    colour: Colors.black87,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Expanded(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage('images/umd_logo.png')),
+                  child: TextButton(
+                    onPressed: _launchURL,
+                    child: new ReusableCard(
+                      colour: Colors.black87,
+                      cardChild: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('images/umd_logo.png')),
+                                ),
+                              ),
+                              flex: 6),
+                          Expanded(
+                            child: Text(
+                              'Department of Transportation',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
                               ),
                             ),
-                            flex: 6),
-                        Expanded(
-                          child: Text(
-                            'Department of Transportation',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 10,
-                            ),
+                            flex: 1,
                           ),
-                          flex: 1,
-                        ),
-                        Expanded(
-                          child: Text(
-                            'About',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
+                          Expanded(
+                            child: Text(
+                              'About',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
                             ),
+                            flex: 2,
                           ),
-                          flex: 2,
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
-                  child: new ReusableCard(
-                    colour: Colors.black87,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: Image.asset(
-                            'images/points.jpg',
-                            height: 200,
-                            width: 250,
-                          ),
-                        )
-                      ],
+                  child: TextButton(
+                    onPressed: _launchURL2,
+                    child: new ReusableCard(
+                      colour: Colors.black87,
+                      cardChild: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Image.asset(
+                              'images/points.jpg',
+                              height: 200,
+                              width: 250,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
