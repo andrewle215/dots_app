@@ -1,3 +1,4 @@
+import 'package:Dots_Demo_App/login.dart';
 import 'package:flutter/material.dart';
 import 'package:Dots_Demo_App/profile.dart';
 
@@ -23,8 +24,11 @@ class NavDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.input),
-            title: Text('Welcome'),
-            onTap: () => {},
+            title: Text('Login'),
+            onTap: () => {Navigator.of(context).pop(),
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => LoginPage()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.verified_user),

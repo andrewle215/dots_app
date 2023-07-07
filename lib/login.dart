@@ -13,6 +13,9 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //
+      // ),
       body: SingleChildScrollView(
         child: Container(
           width: MediaQuery.of(context).size.width,
