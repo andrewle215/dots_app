@@ -11,6 +11,10 @@ class ProfilePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.red),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
           backgroundColor: Colors.white,
           title: Center(
             child: Text(
