@@ -1,5 +1,8 @@
+import 'package:Dots_Demo_App/main.dart';
 import 'package:flutter/material.dart';
-
+import 'package:Dots_Demo_App/input.dart';
+import 'package:Dots_Demo_App/map_page.dart';
+import 'package:Dots_Demo_App/bottom_bar.dart';
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
@@ -11,7 +14,6 @@ class ProfilePage extends StatelessWidget {
           backgroundColor: Colors.white,
           title: Center(
             child: Text(
-
             'Profile',
             style: TextStyle(
               color: Colors.black,
@@ -21,6 +23,7 @@ class ProfilePage extends StatelessWidget {
           ),
           ),
         ),
+      //  bottomNavigationBar: MapTest(),
         backgroundColor: Colors.black,
         body: SafeArea(
             child: Column(
@@ -80,15 +83,17 @@ class ProfilePage extends StatelessWidget {
                         color: Colors.black,
                       ),
                       title: Text(
-                        'mspooner@terpmail.umd.edu',
+                        'mspooner@umd.edu',
                         style: TextStyle(
                             fontSize: 20.0,
                             color: Colors.black,
                             fontFamily: 'Source Sans Pro'),
                       ),
                     ))
+
               ],
-            )),
+            )
+        ),
       ),
     );
   }

@@ -90,37 +90,3 @@ class Location {
       {required this.name, required this.latitude, required this.longitude});
 }
 
-// class MapScreen extends StatefulWidget {
-//   @override
-//   State<MapScreen> createState() => _MapScreenState();
-// }
-//
-// class _MapScreenState extends State<MapScreen> {
-
-//
-
-//
-//   void _handleTap(LatLng point) {
-//     setState(
-//       () {
-//         _markers.add(
-//           Marker(
-//             markerId: MarkerId(point.toString()),
-//             position: point,
-//             infoWindow: const InfoWindow(
-//               title: 'Parking Spot',
-//               snippet: 'This is a parking spot',
-//             ),
-//             icon: BitmapDescriptor.defaultMarkerWithHue(
-//                 BitmapDescriptor.hueGreen),
-//           ),
-//         );
-//       },
-//     );
-//   }
-// }
-
-// void main() {
-//   runApp(MyApp());
-// }
-//
